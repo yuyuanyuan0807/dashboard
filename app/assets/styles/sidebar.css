@@ -1,0 +1,43 @@
+ #sidebar li{
+            
+            list-style: none;
+            font-size: 18px;
+            padding-left:10px;
+            margin-top:10px;
+            
+        }
+        #sidebar span {
+            
+            margin-right:10px;
+        }
+        #sidebar li a{
+            color:#3b3b3b;
+            
+            
+        }
+        #sidebar li:hover{
+            
+            border-left: 5px solid #ea6c57;
+            color:#ea6c57;
+            
+            
+            
+        }
+        #sidebar li a:hover{
+            
+            color:#ea6c57;
+            text-decoration: none;
+            
+        }
+
+        .selected{
+            
+              color:#ea6c57;
+               border-left: 5px solid #ea6c57;
+        }
+        #sidebar .selected a{
+            
+            color:#ea6c57;
+            text-decoration: none;
+            
+        }

@@ -1,0 +1,85 @@
+#sidebar li {
+  list-style: none;
+  font-size: 18px;
+  padding-left: 10px;
+  margin-top: 10px; }
+
+#sidebar span {
+  margin-right: 10px; }
+
+#sidebar li a {
+  color: #3b3b3b; }
+
+#sidebar li:hover {
+  border-left: 5px solid #ea6c57;
+  color: #ea6c57; }
+
+#sidebar li a:hover {
+  color: #ea6c57;
+  text-decoration: none; }
+
+.selectLarge {
+  color: #ea6c57;
+  border-left: 5px solid #ea6c57; }
+
+#sidebar .selectLarge a {
+  color: #ea6c57;
+  text-decoration: none; }
+
+#nav {
+  float: left; }
+  #nav li {
+    float: left; }
+
+#logout {
+  float: right;
+  margin-top: 7px; }
+
+#brand {
+  float: left; }
+
+#menuClick {
+  float: right;
+  margin-top: 3px; }
+
+#menuIcon {
+  color: #bdbdbc;
+  transition: 0.5s; }
+  #menuIcon:hover {
+    color: #F03; }
+
+#menuButton {
+  background-color: #fff;
+  border: 2px solid #ccc; }
+  #menuButton:hover {
+    border: 2px solid #ccc; }
+
+#hiddenMenu {
+  border-bottom: 1px solid #ccc;
+  background-color: #fff;
+  position: relative;
+  top: 0px;
+  right: 15px;
+  color: #000;
+  list-style: none; }
+  #hiddenMenu li {
+    height: 50px;
+    font-size: 1.2em;
+    line-height: 45px;
+    text-align: center;
+    color: #666; }
+    #hiddenMenu li:hover {
+      color: #ea6c57;
+      border-bottom: 1px dashed #ea6c57; }
+    #hiddenMenu li a {
+      color: #000; }
+      #hiddenMenu li a:hover {
+        color: #ea6c57;
+        text-decoration: none; }
+    #hiddenMenu li:hover > a {
+      color: #ea6c57; }
+  #hiddenMenu .select {
+    color: #ea6c57;
+    border-bottom: 1px dashed #ea6c57; }
+    #hiddenMenu .select a {
+      color: #ea6c57; }

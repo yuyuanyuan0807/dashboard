@@ -1,0 +1,11 @@
+.modal-title{
+            text-align:center;
+            font-weight: bold;
+        }
+
+  h4.modal-title{
+	       text-align: center;
+        }
+div.modal-footer button{
+	       float: left;
+        }

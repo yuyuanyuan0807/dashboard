@@ -1,0 +1,13 @@
+.input-group-addon {
+  background-color: white;
+  border-left-style: none; }
+
+#firstName, #lastName, #email, #phone {
+  border-right-style: none; }
+
+#time {
+  background-color: #e6ffe6;
+  border-style: none; }
+
+#currenttime {
+  margin-left: 10px; }

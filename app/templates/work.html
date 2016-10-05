@@ -1,0 +1,76 @@
+<div class="row">
+  
+        <form class="form-inline " >
+            <div class="form-group">
+                <div class="dropdown" id="selectDesign">
+                        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Select design
+                        <span class="caret"></span></button>
+                        <ul class="dropdown-menu">
+                            <li><a href="#" ng-click="hideList=false; hideImage=true">List</a></li>
+                            <li><a href="#" ng-click="hideList=true; hideImage=false">Card</a></li>
+                        </ul>
+                </div>
+            </div>
+              <div class="form-group">
+                <button type="button" class="btn btn-danger" id="addItem"  data-toggle="modal" data-target="#addModal">Add item
+                </button>        
+               </div>
+        <div class="form-group">
+            <input id="name" class="form-control input-group-lg" type="text" name="name"
+           ng-model="search.title" placeholder="Name"/>
+         </div>
+        <div class="form-group">
+            <input id="author" class="form-control input-group-lg" type="text" name="author"
+            ng-model="search.author" placeholder="Author"/>
+        </div>
+        <div class="form-group">
+            <input id="likes" class="form-control input-group-lg" type="number" autocapitalize='off' ng-model="searchLike" name="likes" placeholder="Likes (numbers)"/>
+        </div>
+        <div class="form-group">
+            <input id="comment" class="form-control input-group-lg" type="number" name="comment"
+                   ng-model="searchComment" placeholder="Comment (numbers)"/>
+         </div>
+    
+</form>
+</div>
+<div id="workImgList" class="container-fluid" ng-hide="hideImage" ng-init="hideImage=false;">
+       <div class="row">
+         <div class="col-xs-12 col-sm-6 col-md-4" ng-repeat="work in works | filter:greaterThan1| filter:greaterThan2 | filter: search">
+           <li class="workImg" title="{{work.title}}">
+                    <img src="{{work.image}}"/>
+                    <p><h4>{{work.title}}</h4></p>
+                    <p><a href="">{{work.author}}</a></p>
+                    <p>{{work.like}}</p>
+                    <p>{{work.comment}}</p>
+                    <div class="update"><a ng-click="editItems(work)" data-toggle="modal" data-target="#editModal">edit</a> &nbsp;| &nbsp; <a ui-sref=".confirmBox" ng-click="deleteItem(work)" data-toggle="modal" data-target="#myModal">delete</a> </div>
+                </li>
+        </div>
+</div>
+  
+ </div>
+  <table id="workList" ng-hide="hideList" ng-init="hideList=true;" class="table table-hover table-striped ">
+    <thead class="headingtable">
+        <tr>
+          <td ng-click="reverse=!reverse;order('title', reverse)" ng-init="reverse=true"> Title </td>
+          <td ng-click="reverse=!reverse;order('author', reverse)" ng-init="reverse=true"> Author </td>
+          <td ng-click="reverse=!reverse;order('like', reverse)" ng-init="reverse=true"> Like </td>
+          <td ng-click="reverse=!reverse;order('comment', reverse)" ng-init="reverse=true"> Comment </td>
+          <td>  </td>
+          <td>  </td>
+        </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="work in works | filter:greaterThan1| filter:greaterThan2 | filter: search">
+            <td>{{ work.title }}</td>
+            <td>{{ work.author }}</td>
+            <td>{{ work.like }}</td>
+            <td>{{ work.comment }}</td>
+            <td><a ng-click="editItems(work)" data-toggle="modal" data-target="#editModal"> Edit </a> </td>
+            <td><a ui-sref=".confirmBox" ng-click="deleteItem(work)" data-toggle="modal" data-target="#myModal"> Delete </a> </td>
+        </tr>
+    </tbody>
+  </table>
+  
+<div ui-view></div>
+<additemdirective></additemdirective>
+<edititemdirective></edititemdirective>
